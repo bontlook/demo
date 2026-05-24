@@ -82,7 +82,7 @@ def search():
 @app.route("/refresh", methods=["POST"])
 def refresh():
     run_scrapers()
-    flash("News refreshed successfully!", "success")
+    flash("新闻刷新成功!", "success")
     return redirect(url_for("index"))
 
 

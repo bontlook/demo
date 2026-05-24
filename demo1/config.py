@@ -11,31 +11,31 @@ SCHEDULER_INTERVAL_MINUTES = 30
 
 NEWS_SOURCES = [
     {
-        "name": "Hacker News",
+        "name": "黑客新闻",
         "url": "https://hnrss.org/frontpage",
         "source_type": "rss",
         "category": "tech",
     },
     {
-        "name": "BBC News",
+        "name": "BBC新闻",
         "url": "https://feeds.bbci.co.uk/news/rss.xml",
         "source_type": "rss",
         "category": "world",
     },
     {
-        "name": "Reuters",
+        "name": "路透社",
         "url": "https://www.reutersagency.com/feed/?taxonomy=best-sectors&post_type=best",
         "source_type": "rss",
         "category": "world",
     },
     {
-        "name": "Sina News",
+        "name": "新浪新闻",
         "url": "https://news.sina.com.cn/",
         "source_type": "web",
         "category": "china",
     },
     {
-        "name": "163 News",
+        "name": "网易新闻",
         "url": "https://news.163.com/",
         "source_type": "web",
         "category": "china",

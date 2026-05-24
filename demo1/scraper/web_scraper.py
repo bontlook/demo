@@ -18,7 +18,7 @@ def fetch_web_source(source):
     try:
         resp = requests.get(source.url, headers=HEADERS, timeout=15)
         resp.encoding = resp.apparent_encoding
-        soup = BeautifulSoup(resp.text, "lxml")
+        soup = BeautifulSoup(resp.text, "html.parser")
 
         articles = _extract_articles(soup, source)
         count = 0

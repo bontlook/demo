@@ -1,12 +1,18 @@
 package com.dnui.forest.pojo;
+
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.sql.Date;
-import java.sql.Time;
 
 public class User {
     private int id;
+    private String name;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date time;
+    private String phone;
+    private String location;
+    private String level;
+    private String picture;
 
     public int getId() {
         return id;
@@ -15,14 +21,6 @@ public class User {
     public void setId(int id) {
         this.id = id;
     }
-
-    private String name;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private Date time;
-    private String phone;
-    private String location;
-    private String level;
-    private String picture;
 
     public String getName() {
         return name;
@@ -71,8 +69,4 @@ public class User {
     public void setLevel(String level) {
         this.level = level;
     }
-
-
-    }
-
-
+}

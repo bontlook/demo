@@ -1,0 +1,6 @@
+-- 账户表（用于JWT登录认证）
+CREATE TABLE IF NOT EXISTS `account` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(50) NOT NULL UNIQUE,
+    `password` VARCHAR(64) NOT NULL COMMENT 'SHA-256加密后的密码'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

@@ -1,102 +1,50 @@
 package com.dnui.forest.controller;
 
+import com.dnui.forest.common.Result;
 import com.dnui.forest.pojo.User;
 import com.dnui.forest.service.UserService;
 import jakarta.annotation.Resource;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
+import java.util.List;
 
 @RestController
 @RequestMapping("/user")
 public class UserController {
 
-
-
-
     @Resource
     private UserService userService;
 
-    UploadController uploadController;
+    @Value("${app.upload-dir}")
+    private String uploadDir;
 
-    private final String uploadDir ="D:\\JavaWeb\\end\\forest\\src\\main\\resources\\static\\data\\";
-
-
-
-    @PostMapping ("/insert")
-    public String insert(@RequestBody User user) {
-
-
-         try {
-                user.setPicture(uploadDir+user.getPicture());
-             userService.insert(user);
-             return "success";
-
-         }catch (Exception e) {
-             e.printStackTrace(); // 打印到控制台
-             // 返回错误信息
-             return "error";
-         }
+    @PostMapping("/insert")
+    public Result<Void> insert(@RequestBody User user) {
+        user.setPicture(uploadDir + user.getPicture());
+        userService.insert(user);
+        return Result.success();
     }
 
-
-
-    @RequestMapping("/delete")
-    public String delete(@RequestParam("id") int id) {
+    @DeleteMapping("/delete")
+    public Result<Void> delete(@RequestParam("id") int id) {
         userService.deleteById(id);
-        return "success";
+        return Result.success();
     }
 
-    @RequestMapping("/update")
-    public String update(@RequestBody User user) {
-
-        try{
-            userService.update(user);
-            return "success";
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "error";
-        }
+    @PutMapping("/update")
+    public Result<Void> update(@RequestBody User user) {
+        userService.update(user);
+        return Result.success();
     }
 
-    @RequestMapping("/select")
-    public List<User> selectAll() {
-        return userService.selectAll();
+    @GetMapping("/select")
+    public Result<List<User>> selectAll() {
+        return Result.success(userService.selectAll());
     }
 
-    @RequestMapping("/find")
-    public User findByName(@RequestParam("name") String username) {
-        return userService.findByName(username);
-
+    @GetMapping("/find")
+    public Result<User> findByName(@RequestParam("name") String username) {
+        return Result.success(userService.findByName(username));
     }
-
-//    @PostMapping("/upload")
-//    public String uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
-//        if (file == null || file.isEmpty()) {
-//            throw new IllegalArgumentException("上传文件为空");
-//        }
-//
-//        String extension = "";
-//        String originalFilename = file.getOriginalFilename();
-//        if (originalFilename != null && originalFilename.contains(".")) {
-//            extension = originalFilename.substring(originalFilename.lastIndexOf("."));
-//        }
-//
-//        String newFileName = UUID.randomUUID().toString() + extension;
-//
-//        Path uploadPath = Paths.get(uploadDir);
-//        if (!Files.exists(uploadPath)) {
-//            Files.createDirectories(uploadPath);
-//        }
-//
-//        // 5. 将文件复制到目标位置
-//        Path targetPath = uploadPath.resolve(newFileName);
-//        Files.copy(file.getInputStream(), targetPath, StandardCopyOption.REPLACE_EXISTING);
-//
-//
-//
-//        return  newFileName;
-//    }
-
 }
