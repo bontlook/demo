@@ -1,0 +1,255 @@
+/*NEW_FILE_CODE*/
+/*!* 全局样式 *!*/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*body {*/
+/*    font-family: 'Microsoft YaHei', Arial, sans-serif;*/
+/*    background-color: #f5f5f5;*/
+/*    color: #333;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+/*.container {*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*!* 头部样式 *!*/
+/*.header {*/
+/*    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+/*    color: white;*/
+/*    padding: 20px 0;*/
+/*    text-align: center;*/
+/*    box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*.header h1 {*/
+/*    font-size: 2.5em;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*!* 导航栏样式 *!*/
+/*.navbar {*/
+/*    background-color: #fff;*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+/*    margin-bottom: 30px;*/
+/*}*/
+
+/*.nav-container {*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    padding: 15px 0;*/
+/*}*/
+
+/*.nav-link {*/
+/*    color: #667eea;*/
+/*    text-decoration: none;*/
+/*    padding: 10px 20px;*/
+/*    margin: 0 10px;*/
+/*    border-radius: 5px;*/
+/*    transition: all 0.3s ease;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.nav-link:hover {*/
+/*    background-color: #667eea;*/
+/*    color: white;*/
+/*    transform: translateY(-2px);*/
+/*}*/
+
+/*!* 卡片样式 *!*/
+/*.card {*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+/*    padding: 25px;*/
+/*    margin-bottom: 20px;*/
+/*    transition: transform 0.3s ease;*/
+/*}*/
+
+/*.card:hover {*/
+/*    transform: translateY(-5px);*/
+/*    box-shadow: 0 8px 16px rgba(0,0,0,0.15);*/
+/*}*/
+
+/*.card-title {*/
+/*    font-size: 1.5em;*/
+/*    color: #333;*/
+/*    margin-bottom: 15px;*/
+/*    border-bottom: 2px solid #667eea;*/
+/*    padding-bottom: 10px;*/
+/*}*/
+
+/*!* 表格样式 *!*/
+/*.table {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*    margin-top: 20px;*/
+/*    background: white;*/
+/*    border-radius: 8px;*/
+/*    overflow: hidden;*/
+/*    box-shadow: 0 2px 8px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*.table th {*/
+/*    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+/*    color: white;*/
+/*    padding: 15px;*/
+/*    text-align: left;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.table td {*/
+/*    padding: 12px 15px;*/
+/*    border-bottom: 1px solid #eee;*/
+/*}*/
+
+/*.table tr:nth-child(even) {*/
+/*    background-color: #f8f9ff;*/
+/*}*/
+
+/*.table tr:hover {*/
+/*    background-color: #eef2ff;*/
+/*}*/
+
+/*!* 按钮样式 *!*/
+/*.btn {*/
+/*    display: inline-block;*/
+/*    padding: 12px 24px;*/
+/*    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+/*    color: white;*/
+/*    text-decoration: none;*/
+/*    border-radius: 5px;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    font-size: 16px;*/
+/*    transition: all 0.3s ease;*/
+/*    box-shadow: 0 2px 5px rgba(0,0,0,0.2);*/
+/*}*/
+
+/*.btn:hover {*/
+/*    transform: translateY(-2px);*/
+/*    box-shadow: 0 4px 8px rgba(0,0,0,0.3);*/
+/*}*/
+
+/*.btn-back {*/
+/*    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);*/
+/*}*/
+
+/*!* 表单样式 *!*/
+/*.form-group {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*.form-label {*/
+/*    display: block;*/
+/*    margin-bottom: 8px;*/
+/*    font-weight: bold;*/
+/*    color: #555;*/
+/*}*/
+
+/*.form-input {*/
+/*    width: 100%;*/
+/*    padding: 12px;*/
+/*    border: 2px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*    font-size: 16px;*/
+/*    transition: border-color 0.3s ease;*/
+/*}*/
+
+/*.form-input:focus {*/
+/*    border-color: #667eea;*/
+/*    outline: none;*/
+/*    box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);*/
+/*}*/
+
+/*!* 登录页面样式 *!*/
+/*.login-container {*/
+/*    max-width: 400px;*/
+/*    margin: 100px auto;*/
+/*    padding: 30px;*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 10px 30px rgba(0,0,0,0.1);*/
+/*}*/
+
+/*.login-title {*/
+/*    text-align: center;*/
+/*    color: #333;*/
+/*    margin-bottom: 30px;*/
+/*    font-size: 1.8em;*/
+/*}*/
+
+/*!* 警告信息样式 *!*/
+/*.warning {*/
+/*    background-color: #fff3cd;*/
+/*    border: 1px solid #ffeaa7;*/
+/*    color: #856404;*/
+/*    padding: 15px;*/
+/*    border-radius: 5px;*/
+/*    margin: 10px 0;*/
+/*}*/
+
+/*.danger {*/
+/*    background-color: #f8d7da;*/
+/*    border: 1px solid #f5c6cb;*/
+/*    color: #721c24;*/
+/*    padding: 15px;*/
+/*    border-radius: 5px;*/
+/*    margin: 10px 0;*/
+/*}*/
+
+/*.success {*/
+/*    background-color: #d4edda;*/
+/*    border: 1px solid #c3e6cb;*/
+/*    color: #155724;*/
+/*    padding: 15px;*/
+/*    border-radius: 5px;*/
+/*    margin: 10px 0;*/
+/*}*/
+
+/*!* 图表容器样式 *!*/
+/*.chart-container {*/
+/*    background: white;*/
+/*    border-radius: 10px;*/
+/*    box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+/*    padding: 20px;*/
+/*    margin: 20px 0;*/
+/*}*/
+
+/*!* 响应式设计 *!*/
+/*@media (max-width: 768px) {*/
+/*    .container {*/
+/*        padding: 10px;*/
+/*    }*/
+/*    */
+/*    .header h1 {*/
+/*        font-size: 2em;*/
+/*    }*/
+/*    */
+/*    .nav-container {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+/*    */
+/*    .nav-link {*/
+/*        margin: 5px 0;*/
+/*        width: 200px;*/
+/*        text-align: center;*/
+/*    }*/
+/*    */
+/*    .table {*/
+/*        font-size: 14px;*/
+/*    }*/
+/*    */
+/*    .table th, .table td {*/
+/*        padding: 8px 10px;*/
+/*    }*/
+/*}*/
